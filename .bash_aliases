@@ -11,6 +11,8 @@ alias clr='clear'
 # open with finder
 alias fndr='open .'
 
+# exit with x
+alias x='exit'
+
 # refresh shell
 alias reload='source ~/.bash_profile'
-
