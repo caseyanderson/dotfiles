@@ -23,4 +23,4 @@ fi
 
 # Change prompt
 PS1_OLD=${PS1}
-export PS1='[\!, \u:\W$(__git_ps1 " (%s)")]\$ '
+export PS1='[\!|\u:\W$(__git_ps1 " (%s)")]\$ '
