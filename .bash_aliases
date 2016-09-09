@@ -3,7 +3,21 @@ alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 alias .....='cd ../../../..'
-alias back='cd -'
+alias --='cd -'
+
+# Shortcuts
+alias d="cd ~/Documents/Dropbox"
+alias dl="cd ~/Downloads"
+alias dt="cd ~/Desktop"
+alias g="git"
+alias h="history"
+alias j="jobs"
+
+# Trim new lines and copy to clipboard
+alias c="tr -d '\n' | pbcopy"
+
+# Recursively delete `.DS_Store` files
+alias clnp="find . -type f -name '*.DS_Store' -ls -delete"
 
 # terminal clear
 alias clr='clear'
@@ -14,5 +28,15 @@ alias fndr='open .'
 # exit with x
 alias x='exit'
 
+# Get week number
+alias wk='date +%V'
+
+# Stopwatch
+alias tmr='echo "Timer started. Stop with Ctrl-D." && date && time cat && date'
+
+# Kill all the tabs in Chrome to free up memory
+# # [C] explained: http://www.commandlinefu.com/commands/view/402/exclude-grep-from-your-grepped-output-of-ps-alias-included-in-description
+alias chrmkll="ps ux | grep '[C]hrome Helper --type=renderer' | grep -v extension-process | tr -s ' ' | cut -d ' ' -f2 | xargs kill"
+
 # refresh shell
-alias reload='source ~/.bash_profile'
+alias rld='source ~/.bash_profile'
