@@ -3,7 +3,7 @@ alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 alias .....='cd ../../../..'
-alias --='cd -'
+alias bck='cd -'
 
 # Shortcuts
 alias d="cd ~/Documents/Dropbox"
