@@ -39,9 +39,6 @@ alias fndr='open .'
 # exit with x
 alias x='exit'
 
-# Get week number
-alias wk='date +%V'
-
 # Stopwatch
 alias tmr='echo "Timer started. Stop with Ctrl-D." && date && time cat && date'
 
