@@ -5,6 +5,9 @@ set background=dark			" Assume a dark background
 filetype plugin indent on	" Automatically detect file types.
 syntax on									" Syntax highlighting
 
+set history=1000                    " Store a ton of history (default is 20)
+set nospell                           " Spell checking on
+
 set t_Co=256            " Enable 256 colors to stop the CSApprox warning and make xterm vim shine
 set term=xterm-256color
 
