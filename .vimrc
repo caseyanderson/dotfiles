@@ -35,7 +35,7 @@ set term=xterm-256color
 
 " Vim UI {
 	set background=dark			" Assume a dark background
-	colors zenburn				  " Zenburn from https://github.com/jnurmine/Zenburn
+	colorscheme zenburn				  " Zenburn from https://github.com/jnurmine/Zenburn
 	set showmode				" Display the current mode
 	set cursorline                  " Highlight current line
 	set ruler                   " Show the ruler
