@@ -1,18 +1,20 @@
 " .vimrc for Casey Anderson
 
 set shell=/bin/bash
-set background=dark			" Assume a dark background
+
 filetype plugin indent on	" Automatically detect file types.
 syntax on									" Syntax highlighting
 
 set history=1000                    " Store a ton of history (default is 20)
 set nospell                           " Spell checking on
 
+set guifont="Ubuntu Mono 12"
+
 set t_Co=256            " Enable 256 colors to stop the CSApprox warning and make xterm vim shine
 set term=xterm-256color
 
 " Vim UI {
-
+	set background=dark			" Assume a dark background
 	colors zenburn				  " Zenburn from https://github.com/jnurmine/Zenburn
 	set showmode				" Display the current mode
 	set cursorline                  " Highlight current line
