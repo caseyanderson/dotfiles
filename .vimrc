@@ -8,8 +8,15 @@ syntax on									" Syntax highlighting
 set history=1000                    " Store a ton of history (default is 20)
 set nospell                           " Spell checking on
 
+" set the swapfile and undo directory
+set backupdir=~/.vimswap//
+set undodir=~/.vimundo//
+set directory=~/.vimswap//
+
 set t_Co=256            " Enable 256 colors to stop the CSApprox warning and make xterm vim shine
 set term=xterm-256color
+
+set guifont=Ubuntu\ Mono\ for\ Powerline\ 12
 
 " Bundles {
 	set nocompatible              " be iMproved, required
@@ -22,6 +29,7 @@ set term=xterm-256color
 	" let Vundle manage Vundle, required
 	Plugin 'VundleVim/Vundle.vim'
 
+"    Plugin 'scvim'
 	Plugin 'bling/vim-airline'
 	Plugin 'vim-airline/vim-airline-themes'
 	Plugin 'flazz/vim-colorschemes'
@@ -45,7 +53,7 @@ set term=xterm-256color
 
 	set number						" show line numbers
 	set wildmenu				  " visual autocomplete for command menu
-
+    set wildmode=list:longest,full  " Command <Tab> completion, list matches, then longest common part, then all.
 " }
 
 
