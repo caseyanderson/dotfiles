@@ -46,6 +46,7 @@ set undofile                " So is persistent undo ...
 set undolevels=1000         " Maximum number of changes that can be undone
 set undoreload=10000        " Maximum number lines to save for undo on a buffer reload
 
+
 " Vim UI {
 	set background=dark			" Assume a dark background
 	colorscheme zenburn				  " Zenburn from https://github.com/jnurmine/Zenburn
