@@ -5,6 +5,7 @@ set shell=/bin/bash
 filetype plugin indent on	" Automatically detect file types.
 syntax on									" Syntax highlighting
 
+set virtualedit=onemore             " Allow for cursor beyond last character
 set history=1000                    " Store a ton of history (default is 20)
 set nospell                           " Spell checking on
 
@@ -29,7 +30,6 @@ set guifont=Ubuntu\ Mono\ for\ Powerline\ 12
 	" let Vundle manage Vundle, required
 	Plugin 'VundleVim/Vundle.vim'
 
-"    Plugin 'scvim'
 	Plugin 'bling/vim-airline'
 	Plugin 'vim-airline/vim-airline-themes'
 	Plugin 'flazz/vim-colorschemes'
@@ -55,20 +55,27 @@ set undoreload=10000        " Maximum number lines to save for undo on a buffer 
 	set ruler                   " Show the ruler
 	set rulerformat=%30(%=\:b%n%y%m%r%w\ %l,%c%V\ %P%) " A ruler on steroids
 	set showcmd                 " Show partial commands in status line and
-
-
 	set number						" show line numbers
-	set wildmenu				  " visual autocomplete for command menu
+
+    set backspace=indent,eol,start  " Backspace for dummies
+    set showmatch                   " Show matching brackets/parenthesis
+    set incsearch                   " Find as you type search
+    set hlsearch                    " Highlight search terms
+    set ignorecase                  " Case insensitive search
+    set wildmenu                    " Show list instead of just completing
     set wildmode=list:longest,full  " Command <Tab> completion, list matches, then longest common part, then all.
+    set whichwrap=b,s,h,l,<,>,[,]   " Backspace and cursor keys wrap too
+
 " }
 
 
 " Formatting {
 
 	set autoindent					" Indent at the same level of the previous line
-	set tabstop=4					" number of visual spaces per TAB
-	set softtabstop=4			" number of spaces in tab when editing
-	set expandtab					" tabs are spaces
+    set shiftwidth=4                " Use indents of 4 spaces
+    set noexpandtab                   " Tabs are spaces, not tabs
+    set tabstop=4                   " An indentation every four columns
+    set softtabstop=4               " Let backspace delete indent
 
 " }
 
