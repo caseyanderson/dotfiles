@@ -8,6 +8,7 @@
 
 	" let Vundle manage Vundle, required
 	Plugin 'VundleVim/Vundle.vim'
+
 	Plugin 'flazz/vim-colorschemes'
 	Plugin 'tpope/vim-fugitive'
 
