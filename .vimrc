@@ -1,3 +1,5 @@
+" .vimrc for Casey Anderson
+
 " Bundles {
 	set nocompatible              " be iMproved, required
 	filetype off                  " required
@@ -20,6 +22,7 @@
 " Vim UI {
 
 	colorscheme zenburn
+
 	set cursorline                  " Highlight current line
 	set backspace=indent,eol,start  " Backspace for dummies
 	set linespace=0                 " No extra spaces between rows
@@ -30,5 +33,16 @@
  	set ignorecase                  " Case insensitive search
 	set wildmenu                    " Show list instead of just completing
 	set wildmode=list:longest,full  " Command <Tab> completion, list matches, then longest common part, then all.
+
+" }
+
+" Formatting {
+	
+	set nowrap                      " Do not wrap long lines
+	set autoindent                  " Indent at the same level of the previous line
+	set shiftwidth=2                " Use indents of 4 spaces
+	set expandtab                   " Tabs are spaces, not tabs
+ 	set softtabstop=4               " Let backspace delete indent
+	set nojoinspaces                " Prevents inserting two spaces after punctuation on a join (J)
 
 " }
