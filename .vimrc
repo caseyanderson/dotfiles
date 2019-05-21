@@ -1,5 +1,7 @@
 " .vimrc for Casey Anderson
 
+set t_Co=256            " Enable 256 colors to stop the CSApprox warning and make xterm vim shine
+
 " Bundles {
     set nocompatible              " be iMproved, required
     filetype off                  " required
