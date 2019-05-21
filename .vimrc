@@ -84,6 +84,9 @@ set undoreload=10000        " Maximum number lines to save for undo on a buffer 
     set softtabstop=4               " Let backspace delete indent
     set nojoinspaces                " Prevents inserting two spaces after punctuation on a join (J)
 
+    set splitright                  " Puts new vsplit windows to the right of the current
+    set splitbelow                  " Puts new split windows to the bottom of the current
+
 " }
 
 " Key (re)Mappings {
