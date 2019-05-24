@@ -76,9 +76,6 @@ set undoreload=10000        " Maximum number lines to save for undo on a buffer 
     set rulerformat=%30(%=\:b%n%y%m%r%w\ %l,%c%V\ %P%) " A ruler on steroids
     set showcmd                 " Show partial commands in status line and
 
-    " Show the airline status bar on load
-    set laststatus=2
-
     " Broken down into easily includeable segments
     set statusline=%<%f\                     " Filename
     set statusline+=%w%h%m%r                 " Options
@@ -135,34 +132,35 @@ set undoreload=10000        " Maximum number lines to save for undo on a buffer 
 " }
 
 " airline {
-  set laststatus=2
-  let g:airline_powerline_fonts = 1
 
-  let g:airline_theme = 'zenburn'
+    let g:airline_powerline_fonts = 1
 
-  if !exists('g:airline_powerline_fonts')
-  " Use the default set of separators with a few customizations
-  let g:airline_left_sep='›'  " Slightly fancier than '>'
-  let g:airline_right_sep='‹' " Slightly fancier than '<'
-  endif
+    let g:airline_theme = 'zenburn'
+
+    if !exists('g:airline_powerline_fonts')
+        " Use the default set of separators with a few customizations
+        let g:airline_left_sep='›'  " Slightly fancier than '>'
+        let g:airline_right_sep='‹' " Slightly fancier than '<'
+    endif
 
 
-  if !exists('g:airline_symbols')
-  let g:airline_symbols = {}
-  endif
+    if !exists('g:airline_symbols')
+        let g:airline_symbols = {}
+    endif
 
-  " unicode symbols
-  let g:airline_left_sep = '»'
-  let g:airline_left_sep = '▶'
-  let g:airline_right_sep = '«'
-  let g:airline_right_sep = '◀'
-  let g:airline_symbols.linenr = '␊'
-  let g:airline_symbols.linenr = '␤'
-  let g:airline_symbols.linenr = '¶'
-  let g:airline_symbols.branch = '⎇'
-  let g:airline_symbols.paste = 'ρ'
-  let g:airline_symbols.paste = 'Þ'
-  let g:airline_symbols.paste = '∥'
-  let g:airline_symbols.whitespace = 'Ξ'
+    " unicode symbols
+    let g:airline_left_sep = '»'
+    let g:airline_left_sep = '▶'
+    let g:airline_right_sep = '«'
+    let g:airline_right_sep = '◀'
+    let g:airline_symbols.linenr = '␊'
+    let g:airline_symbols.linenr = '␤'
+    let g:airline_symbols.linenr = '¶'
+    let g:airline_symbols.branch = '⎇'
+    let g:airline_symbols.paste = 'ρ'
+    let g:airline_symbols.paste = 'Þ'
+    let g:airline_symbols.paste = '∥'
+    let g:airline_symbols.whitespace = 'Ξ'
 " }
+
 let g:airline#extensions#ale#enabled = 1
