@@ -22,6 +22,8 @@ set t_Co=256            " Enable 256 colors to stop the CSApprox warning and mak
     Plugin 'tpope/vim-fugitive'
     Plugin 'scrooloose/nerdtree'
     Plugin 'airblade/vim-gitgutter'
+    Plugin 'bling/vim-airline'
+    Plugin 'vim-airline/vim-airline-themes'
     
     " All of your Plugins must be added before the following line
     call vundle#end()            " required
@@ -72,7 +74,18 @@ set undoreload=10000        " Maximum number lines to save for undo on a buffer 
     set ruler                   " Show the ruler
     set rulerformat=%30(%=\:b%n%y%m%r%w\ %l,%c%V\ %P%) " A ruler on steroids
     set showcmd                 " Show partial commands in status line and
-    
+   
+    " Show the airline status bar on load
+    "set laststatus=2
+	
+    " Broken down into easily includeable segments
+    set statusline=%<%f\                     " Filename
+    set statusline+=%w%h%m%r                 " Options
+    set statusline+=%{fugitive#statusline()} " Git Hotness
+    set statusline+=\ [%{&ff}/%Y]            " Filetype
+    set statusline+=\ [%{getcwd()}]          " Current dir
+    set statusline+=%=%-14.(%l,%c%V%)\ %p%%  " Right aligned file nav info
+
     set backspace=indent,eol,start  " Backspace for dummies
     set linespace=0                 " No extra spaces between rows
     set number                      " Line numbers on
@@ -82,6 +95,9 @@ set undoreload=10000        " Maximum number lines to save for undo on a buffer 
     set ignorecase                  " Case insensitive search
     set wildmenu                    " Show list instead of just completing
     set wildmode=list:longest,full  " Command <Tab> completion, list matches, then longest common part, then all.
+    set whichwrap=b,s,h,l,<,>,[,]   " Backspace and cursor keys wrap too
+    set scrolljump=5                " Lines to scroll when cursor leaves screen
+    set scrolloff=3                 " Minimum lines to keep above and below cursor
 
 " }
 
@@ -113,3 +129,40 @@ set undoreload=10000        " Maximum number lines to save for undo on a buffer 
     nmap <silent> <leader>/ :nohlsearch<CR>
 
 " }
+
+" airline {
+	set laststatus=2
+	let g:airline_powerline_fonts = 1
+
+	"let g:airline_theme = 'solarized'
+	let g:airline_theme = 'zenburn'
+	"let g:airline_theme = 'powerlineish'
+	"let g:airline_theme = 'molokai'
+
+	if !exists('g:airline_powerline_fonts')
+		" Use the default set of separators with a few customizations
+		let g:airline_left_sep='›'  " Slightly fancier than '>'
+		let g:airline_right_sep='‹' " Slightly fancier than '<'
+	endif
+
+
+	if !exists('g:airline_symbols')
+		let g:airline_symbols = {}
+	endif
+
+	" unicode symbols
+	let g:airline_left_sep = '»'
+	let g:airline_left_sep = '▶'
+	let g:airline_right_sep = '«'
+	let g:airline_right_sep = '◀'
+	let g:airline_symbols.linenr = '␊'
+	let g:airline_symbols.linenr = '␤'
+	let g:airline_symbols.linenr = '¶'
+	let g:airline_symbols.branch = '⎇'
+	let g:airline_symbols.paste = 'ρ'
+	let g:airline_symbols.paste = 'Þ'
+	let g:airline_symbols.paste = '∥'
+	let g:airline_symbols.whitespace = 'Ξ'
+" }
+let g:airline#extensions#ale#enabled = 1
+
