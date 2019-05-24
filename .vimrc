@@ -134,10 +134,7 @@ set undoreload=10000        " Maximum number lines to save for undo on a buffer 
   set laststatus=2
   let g:airline_powerline_fonts = 1
 
-  "let g:airline_theme = 'solarized'
   let g:airline_theme = 'zenburn'
-  "let g:airline_theme = 'powerlineish'
-  "let g:airline_theme = 'molokai'
 
   if !exists('g:airline_powerline_fonts')
   " Use the default set of separators with a few customizations
