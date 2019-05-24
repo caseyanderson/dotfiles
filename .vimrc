@@ -17,7 +17,7 @@ set t_Co=256            " Enable 256 colors to stop the CSApprox warning and mak
 
     " let Vundle manage Vundle, required
     Plugin 'VundleVim/Vundle.vim'
-    
+
     Plugin 'scvim'
     Plugin 'flazz/vim-colorschemes'
     Plugin 'tpope/vim-fugitive'
@@ -77,7 +77,7 @@ set undoreload=10000        " Maximum number lines to save for undo on a buffer 
     set showcmd                 " Show partial commands in status line and
 
     " Show the airline status bar on load
-    "set laststatus=2
+    set laststatus=2
 
     " Broken down into easily includeable segments
     set statusline=%<%f\                     " Filename
@@ -111,8 +111,11 @@ set undoreload=10000        " Maximum number lines to save for undo on a buffer 
     set softtabstop=4               " Let backspace delete indent
     set nojoinspaces                " Prevents inserting two spaces after punctuation on a join (J)
 
-     set splitright                  " Puts new vsplit windows to the right of the current
-     set splitbelow                  " Puts new split windows to the bottom of the current
+    set splitright                  " Puts new vsplit windows to the right of the current
+    set splitbelow                  " Puts new split windows to the bottom of the current
+
+    " automatically remove trailing whitespace when :w
+    autocmd BufWritePre * %s/\s\+$//e
 
 " }
 
