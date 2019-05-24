@@ -17,7 +17,8 @@ set t_Co=256            " Enable 256 colors to stop the CSApprox warning and mak
 
     " let Vundle manage Vundle, required
     Plugin 'VundleVim/Vundle.vim'
-
+    
+    Plugin 'scvim'
     Plugin 'flazz/vim-colorschemes'
     Plugin 'tpope/vim-fugitive'
     Plugin 'scrooloose/nerdtree'
