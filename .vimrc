@@ -172,7 +172,4 @@ let g:airline#extensions#ale#enabled = 1
     " turn off autostart of markdown preview
     let g:instant_markdown_autostart = 0
 
-    " instant markdown server is open to the world
-    let g:instant_markdown_open_to_the_world = 1
-
 " }
