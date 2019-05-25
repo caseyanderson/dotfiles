@@ -21,10 +21,11 @@ set t_Co=256            " Enable 256 colors to stop the CSApprox warning and mak
     Plugin 'scvim'
     Plugin 'flazz/vim-colorschemes'
     Plugin 'tpope/vim-fugitive'
-    Plugin 'scrooloose/nerdtree'
     Plugin 'airblade/vim-gitgutter'
+    Plugin 'scrooloose/nerdtree'
     Plugin 'bling/vim-airline'
     Plugin 'vim-airline/vim-airline-themes'
+    Plugin 'suan/vim-instant-markdown', {'rtp': 'after'}
 
     " All of your Plugins must be added before the following line
     call vundle#end()            " required
