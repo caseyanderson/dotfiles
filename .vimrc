@@ -165,3 +165,14 @@ set undoreload=10000        " Maximum number lines to save for undo on a buffer 
 " }
 
 let g:airline#extensions#ale#enabled = 1
+
+
+" Markdown {
+
+    " turn off autostart of markdown preview
+    let g:instant_markdown_autostart = 0
+
+    " instant markdown server is open to the world
+    let g:instant_markdown_open_to_the_world = 1
+
+" }
