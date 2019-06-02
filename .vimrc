@@ -129,6 +129,12 @@ set undoreload=10000        " Maximum number lines to save for undo on a buffer 
     "NerdTree toggle
     map <C-e> :NERDTreeToggle<CR>
 
+    " Easier motion for switching between splits (Ctrl-motion)
+    map <C-J> <C-W>j<C-W>_
+    map <C-K> <C-W>k<C-W>_
+    map <C-L> <C-W>l<C-W>_
+    map <C-H> <C-W>h<C-W>_
+
     let mapleader = ','
 
     " Clear search highlight
