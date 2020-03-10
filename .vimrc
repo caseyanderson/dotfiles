@@ -189,3 +189,11 @@ let g:airline#extensions#ale#enabled = 1
     let g:instant_markdown_autostart = 0
 
 " }
+
+" NERDTree {
+
+    let NERDTreeMinimalUI = 1
+    let NERDTreeDirArrows = 1
+    let NERDTreeQuitOnOpen = 1
+
+" }
