@@ -5,9 +5,9 @@ set backupdir=~/.vimswap//
 set undodir=~/.vimundo//
 set directory=~/.vimswap//
 
-set guifont=Liberation\ Mono\ for\ Powerline\ 10
-
 set t_Co=256            " Enable 256 colors to stop the CSApprox warning and make xterm vim shine
+
+set guifont=Ubuntu\ Mono\ derivative\ for\ Powerline\ 10
 
 set nocompatible              " be iMproved, required
 filetype off                  " required
@@ -16,7 +16,7 @@ call plug#begin('~/.config/nvim/plugged')
 
 Plug 'flazz/vim-colorschemes'
 
-Plug 'bling/vim-airline'
+Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
 Plug 'scrooloose/nerdtree'
@@ -143,39 +143,32 @@ nmap <silent> <leader>/ :nohlsearch<CR>
 
 " airline {
 
-    set laststatus=2
-    let g:airline_powerline_fonts = 1
+set laststatus=2
+let g:airline_powerline_fonts = 1
 
-    let g:airline_theme = 'zenburn'
+let g:airline_theme = 'zenburn'
 
-    if !exists('g:airline_powerline_fonts')
-        " Use the default set of separators with a few customizations
-        let g:airline_left_sep='›'  " Slightly fancier than '>'
-        let g:airline_right_sep='‹' " Slightly fancier than '<'
-    endif
+if !exists('g:airline_powerline_fonts')
+	" Use the default set of separators with a few customizations
+	let g:airline_left_sep='›'  " Slightly fancier than '>'
+	let g:airline_right_sep='‹' " Slightly fancier than '<'
+endif
 
 
-    if !exists('g:airline_symbols')
-        let g:airline_symbols = {}
-    endif
+if !exists('g:airline_symbols')
+	let g:airline_symbols = {}
+endif
 
 " unicode symbols
 let g:airline_left_sep = '»'
-let g:airline_left_sep = '▶'
 let g:airline_right_sep = '«'
-let g:airline_right_sep = '◀'
-let g:airline_symbols.linenr = '␊'
-let g:airline_symbols.linenr = '␤'
 let g:airline_symbols.linenr = '¶'
-let g:airline_symbols.branch = '⎇'
 let g:airline_symbols.paste = 'ρ'
 let g:airline_symbols.paste = 'Þ'
-let g:airline_symbols.paste = '∥'
 let g:airline_symbols.whitespace = 'Ξ'
 
 " }
 
-let g:airline#extensions#ale#enabled = 1
 
 " NERDTree {
 
