@@ -7,7 +7,7 @@ set directory=~/.vimswap//
 
 set t_Co=256            " Enable 256 colors to stop the CSApprox warning and make xterm vim shine
 
-set guifont=Ubuntu\ Mono\ derivative\ for\ Powerline\ 10
+set guifont=Ubuntu\ Mono\ Nerd\ Font\ Complete\ 10
 
 set nocompatible              " be iMproved, required
 filetype off                  " required
@@ -159,14 +159,20 @@ if !exists('g:airline_symbols')
 	let g:airline_symbols = {}
 endif
 
-" unicode symbols
-let g:airline_left_sep = '»'
-let g:airline_right_sep = '«'
-let g:airline_symbols.linenr = '¶'
-let g:airline_symbols.paste = 'ρ'
-let g:airline_symbols.paste = 'Þ'
-let g:airline_symbols.whitespace = 'Ξ'
 
+	" unicode symbols
+	let g:airline_left_sep = '»'
+"	let g:airline_left_sep = '▶'
+	let g:airline_right_sep = '«'
+"	let g:airline_right_sep = '◀'
+"	let g:airline_symbols.linenr = '␊'
+"	let g:airline_symbols.linenr = '␤'
+	let g:airline_symbols.linenr = '¶'
+"	let g:airline_symbols.branch = '⎇'
+	let g:airline_symbols.paste = 'ρ'
+	let g:airline_symbols.paste = 'Þ'
+"	let g:airline_symbols.paste = '∥'
+	let g:airline_symbols.whitespace = 'Ξ'
 " }
 
 
