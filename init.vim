@@ -24,6 +24,10 @@ Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
 
+Plug 'nikvdp/neomux'
+
+Plug 'davidgranstrom/scnvim'
+
 call plug#end()
 
 set shell=/bin/bash
@@ -183,3 +187,12 @@ let NERDTreeDirArrows = 1
 let NERDTreeQuitOnOpen = 1
 
 " }
+
+" SCNvim {
+
+lua << EOF
+require('scnvim').setup()
+EOF
+
+" }
+
