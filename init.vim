@@ -130,7 +130,7 @@ map <C-n> :NERDTreeToggle<CR>
 map <C-J> <C-W>j<C-W>_
 map <C-K> <C-W>k<C-W>_
 map <C-L> <C-W>l<C-W>_
-map <C-H> <C-W>h<C-W>_
+map <C-H> <C-W>h<C-W> _
 
 let mapleader = ','
 
@@ -194,7 +194,7 @@ local map = scnvim.map
 local map_expr = scnvim.map_expr
 scnvim.setup {
     sclang = {
-        cmd = 'C:/Program Files/SuperCollider-3.12.2/sclang.exe'
+        cmd = 'C:/Program Files/SuperCollider-3.13.0/sclang.exe'
         },
     keymaps = {
         ['<M-e>'] = map('editor.send_line', {'i', 'n'}),
