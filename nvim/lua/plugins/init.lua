@@ -49,6 +49,11 @@ return {
   },
 
   {
+    "brianhuster/live-preview.nvim",
+    cmd = "LivePreview",
+  },
+
+  {
     "kylechui/nvim-surround",
     version = "^4.0.0",
     event = "VeryLazy",
