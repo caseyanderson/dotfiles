@@ -27,12 +27,11 @@ vim.opt.rtp:prepend(lazypath)
 local init_file = debug.getinfo(1, "S").source:sub(2)
 local config_dir = vim.fn.fnamemodify(init_file, ":p:h")
 
+vim.opt.rtp:prepend(config_dir)
+
 require("lazy").setup({
   spec = {
-    {
-      "nvim-lualine/lualine.nvim",
-      opts = {},
-    },
+    { import = "plugins" },
   },
   lockfile = config_dir .. "/lazy-lock.json",
   checker = { enabled = false },
