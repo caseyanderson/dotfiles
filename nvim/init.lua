@@ -14,6 +14,7 @@ require("config.autocmds")
 vim.opt.number = true          -- Show absolute line numbers
 vim.opt.relativenumber = true  -- Show relative line numbers
 vim.opt.mouse = "a"            -- Enable mouse support
+vim.opt.clipboard = "unnamedplus" -- Share the system clipboard
 vim.opt.termguicolors = true   -- Enable 24-bit terminal colors
 vim.opt.cursorline = true      -- Highlight the current line
 vim.opt.showmatch = true       -- Briefly show the matching bracket
