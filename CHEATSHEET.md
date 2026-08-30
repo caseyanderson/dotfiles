@@ -85,6 +85,28 @@ ds{character}          delete surroundings
 cs{old}{new}           change surroundings
 ```
 
+## SuperCollider with scnvim
+
+scnvim loads only for `.sc` and `.scd` files.
+
+| Key or command | Action |
+| --- | --- |
+| `,st` | Start sclang |
+| `,sk` | Recompile the SuperCollider class library |
+| `,sb` | Boot the audio server |
+| `,sm` | Open the server meter and keep it visible |
+| `Alt-e` | Evaluate the current line |
+| `Ctrl-e` | Evaluate the surrounding block |
+| `Ctrl-e` in Visual mode | Evaluate the selection |
+| `Enter` | Toggle the Post window |
+| `Alt-l` | Clear the Post window |
+| `,k` | Show the function signature at the cursor |
+| `,.` | Emergency stop |
+| `:SCNvimStop` | Stop sclang |
+| `:SCNvimGenerateAssets` | Regenerate machine-local tags, syntax data, and snippets |
+
+Generated assets and the SuperCollider extension junction are machine-local and are not stored in the repository.
+
 ## Git with Fugitive
 
 Fugitive operates on the Git repository containing the current file.
