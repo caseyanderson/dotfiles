@@ -1,6 +1,14 @@
 -- Use comma as the leader key
 vim.g.mapleader = ","
 
+-- Recognize SuperCollider source files
+vim.filetype.add({
+  extension = {
+    sc = "supercollider",
+    scd = "supercollider",
+  },
+})
+
 -- Locate this configuration when loaded directly or through a link
 local init_file = debug.getinfo(1, "S").source:sub(2)
 local config_dir = vim.fn.fnamemodify(init_file, ":p:h")
