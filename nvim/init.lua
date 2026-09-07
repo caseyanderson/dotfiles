@@ -17,6 +17,7 @@ vim.opt.rtp:prepend(config_dir)
 -- Load general configuration modules
 require("config.keymaps")
 require("config.autocmds")
+require("config.lsp")
 
 -- Editor display
 vim.opt.number = true          -- Show absolute line numbers

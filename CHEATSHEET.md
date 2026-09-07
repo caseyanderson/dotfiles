@@ -24,6 +24,7 @@ Vertical splits open to the right. Horizontal splits open below.
 - Three lines of context remain visible above and below the cursor while scrolling
 - Tabs entered during editing become spaces
 - Indentation and soft-tab width are four spaces
+- New files use portable LF line endings
 - Tabs appear as `›`; trailing spaces appear as `•`
 - Trailing whitespace is removed automatically whenever a file is saved
 - Backup files, swap files, and persistent undo history are stored outside projects
@@ -48,6 +49,42 @@ After `:retab` or `gg=G`, save and inspect the changes before committing:
 ```vim
 :Git diff
 ```
+
+## Python development
+
+Python projects use `uv` for Python versions, dependencies, and isolated environments. Run project commands from the directory containing `pyproject.toml`.
+
+```text
+uv sync
+uv run python setup_nltk.py
+uv run --with jupyter jupyter lab
+uv run ruff format src
+uv run ruff check src
+```
+
+Neovim starts the project-local Ruff and Basedpyright language servers through `uv` when a Python file belongs to a project containing `pyproject.toml`.
+
+- Ruff reports lint problems and formats Python files automatically on save
+- Basedpyright provides type analysis, completion, hover help, and navigation
+- Jupyter is for exploration; maintained code belongs in importable `.py` modules
+- `%load_ext autoreload` and `%autoreload 2` reload saved module changes in a notebook session
+
+| Key or command | Action |
+| --- | --- |
+| `Ctrl-n` / `Ctrl-p` in Insert mode | Move through completion suggestions |
+| `Ctrl-y` in Insert mode | Accept a completion suggestion |
+| `Ctrl-x Ctrl-o` in Insert mode | Request LSP completion manually |
+| `K` | Show documentation for the symbol under the cursor |
+| `q` | Close the documentation window |
+| `gd` | Go to a symbol's definition |
+| `Ctrl-o` | Return after following a definition |
+| `grr` | Find references to the symbol under the cursor |
+| `grn` | Rename the symbol under the cursor |
+| `gra` | Show available code actions |
+| `gri` | Go to an implementation |
+| `Ctrl-s` in Insert mode | Show function signature help |
+| `:checkhealth vim.lsp` | Show enabled configurations and active language servers |
+| `:lsp restart` | Restart attached language servers |
 
 ## nvim-tree
 
@@ -143,6 +180,9 @@ LuaRocks integration is disabled because the current plugins do not require it. 
 | `nvim/init.lua` | Shared editor settings, recovery paths, and Lazy bootstrap |
 | `nvim/lua/config/keymaps.lua` | General key mappings |
 | `nvim/lua/config/autocmds.lua` | Automatic editor events |
+| `nvim/lua/config/lsp.lua` | Shared language-server behavior and completion |
+| `nvim/lsp/ruff.lua` | Project-local Ruff server configuration |
+| `nvim/lsp/basedpyright.lua` | Project-local Basedpyright server configuration |
 | `nvim/lua/plugins/init.lua` | Plugin specifications and settings |
 | `nvim/lazy-lock.json` | Exact installed plugin revisions |
 

@@ -14,6 +14,31 @@ vim.api.nvim_create_autocmd("BufWritePre", {
 })
 
 
+-- Format Python files with Ruff before saving
+local format_python = vim.api.nvim_create_augroup("format_python", {
+  clear = true,
+})
+
+vim.api.nvim_create_autocmd("BufWritePre", {
+  group = format_python,
+  pattern = "*.py",
+  callback = function(args)
+    local clients = vim.lsp.get_clients({
+      bufnr = args.buf,
+      name = "ruff",
+    })
+
+    if #clients > 0 then
+      vim.lsp.buf.format({
+        async = false,
+        bufnr = args.buf,
+        name = "ruff",
+      })
+    end
+  end,
+})
+
+
 -- Start Git commit messages on the first line
 local git_commit_cursor = vim.api.nvim_create_augroup("git_commit_cursor", {
   clear = true,
