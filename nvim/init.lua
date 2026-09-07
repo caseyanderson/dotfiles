@@ -58,6 +58,8 @@ vim.opt.winminheight = 0   -- Allow inactive splits to collapse completely
 vim.opt.expandtab = true  -- Insert spaces when pressing Tab
 vim.opt.shiftwidth = 4     -- Use four spaces for indentation
 vim.opt.softtabstop = 4    -- Treat four spaces as one editing step
+vim.opt.fileformats = { "unix", "dos" } -- Detect LF and CRLF files
+vim.opt.fileformat = "unix"              -- Use LF for new files
 
 
 -- File recovery
