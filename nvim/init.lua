@@ -50,6 +50,9 @@ vim.opt.smartcase = true   -- Use case-sensitive search when uppercase is typed
 vim.opt.wildmode = "list:longest,full"  -- List matches before cycling through them
 
 
+-- Insert-mode completion
+vim.opt.completeopt = { "menuone", "noselect", "popup" } -- Show suggestions without selecting one
+
 -- Window layout
 vim.opt.splitright = true  -- Open vertical splits to the right
 vim.opt.splitbelow = true  -- Open horizontal splits below
