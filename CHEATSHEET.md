@@ -54,6 +54,15 @@ After `:retab` or `gg=G`, save and inspect the changes before committing:
 
 Python projects use `uv` for Python versions, dependencies, and isolated environments. Run project commands from the directory containing `pyproject.toml`.
 
+Initialize a new project and add its editor tools:
+
+```text
+uv init
+uv add --dev ruff basedpyright
+```
+
+Common project commands:
+
 ```text
 uv sync
 uv run python setup_nltk.py
@@ -68,6 +77,8 @@ Neovim starts the project-local Ruff and Basedpyright language servers through `
 - Basedpyright provides type analysis, completion, hover help, and navigation
 - Jupyter is for exploration; maintained code belongs in importable `.py` modules
 - `%load_ext autoreload` and `%autoreload 2` reload saved module changes in a notebook session
+
+Completion menus open only when requested with `Ctrl-x Ctrl-o`. No suggestion is selected automatically.
 
 | Key or command | Action |
 | --- | --- |
